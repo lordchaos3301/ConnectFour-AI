@@ -1,6 +1,6 @@
 pub const ROWS: usize = 6;
 pub const COLUMNS: usize = 7;
-const DIRECTIONS: [(i32, i32); 4] = [(0, 1), (1, 0), (1, 1), (1, -1)];
+pub const DIRECTIONS: [(i32, i32); 4] = [(0, 1), (1, 0), (1, 1), (1, -1)];
 
 pub struct Board {
     active_player: i8,
@@ -58,7 +58,7 @@ impl Board {
             if total >= 4 {
                 return true;
             }
-        } 
+        }
         false
     }
 
@@ -216,5 +216,4 @@ mod tests {
         }
         assert!(board.is_full())
     }
-
 }
